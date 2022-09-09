@@ -219,7 +219,7 @@ if __name__ == '__main__':
     if args.fofa_icon:
         i_hash = Shodanico(args.fofa_icon).get_hash()
         search = 'icon_hash="{}"'.format(i_hash)
-        s = Fofa(search, args.page, args.output)
+        s = Fofa(search, args.page, args.output, proxies)
         s.login()
         s.search()
 
